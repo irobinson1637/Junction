@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15CBA851D5E84BD00FFFCA3 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; };
+		F15CBA861D5E84BD00FFFCA3 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */; };
+		F15CBA901D5E8A7800FFFCA3 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA8F1D5E8A7800FFFCA3 /* HealthKitManager.swift */; };
+		F15CBA921D5E8BF900FFFCA3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */; };
+		F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */; };
+		F15CBA961D5E905000FFFCA3 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA951D5E905000FFFCA3 /* DataParser.swift */; };
 		F1EE46551D5E83600085253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46541D5E83600085253A /* AppDelegate.swift */; };
 		F1EE46571D5E83600085253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46561D5E83600085253A /* ViewController.swift */; };
 		F1EE465A1D5E83600085253A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EE46581D5E83600085253A /* Main.storyboard */; };
@@ -14,9 +21,31 @@
 		F1EE465F1D5E83600085253A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EE465D1D5E83600085253A /* LaunchScreen.storyboard */; };
 		F1EE466A1D5E83600085253A /* JunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46691D5E83600085253A /* JunctionTests.swift */; };
 		F1EE46751D5E83600085253A /* JunctionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46741D5E83600085253A /* JunctionUITests.swift */; };
+		F1EE46841D5E839C0085253A /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46831D5E839C0085253A /* ConsentDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F15CBA811D5E84AF00FFFCA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		F15CBA831D5E84AF00FFFCA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		F15CBA871D5E84BD00FFFCA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 		F1EE46661D5E83600085253A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1EE46491D5E83600085253A /* Project object */;
@@ -33,7 +62,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F15CBA891D5E84BD00FFFCA3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F15CBA861D5E84BD00FFFCA3 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Junction.entitlements; sourceTree = "<group>"; };
+		F15CBA8F1D5E8A7800FFFCA3 /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTask.swift; sourceTree = "<group>"; };
+		F15CBA951D5E905000FFFCA3 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		F1EE46511D5E83600085253A /* Junction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EE46541D5E83600085253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1EE46561D5E83600085253A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +97,7 @@
 		F1EE46701D5E83600085253A /* JunctionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JunctionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EE46741D5E83600085253A /* JunctionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunctionUITests.swift; sourceTree = "<group>"; };
 		F1EE46761D5E83600085253A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1EE46831D5E839C0085253A /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15CBA921D5E8BF900FFFCA3 /* HealthKit.framework in Frameworks */,
+				F15CBA851D5E84BD00FFFCA3 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +127,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F15CBA7C1D5E84AE00FFFCA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */,
+				F15CBA841D5E84AF00FFFCA3 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F1EE46481D5E83600085253A = {
 			isa = PBXGroup;
 			children = (
+				F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */,
+				F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */,
+				F15CBA8F1D5E8A7800FFFCA3 /* HealthKitManager.swift */,
+				F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */,
 				F1EE46531D5E83600085253A /* Junction */,
 				F1EE46681D5E83600085253A /* JunctionTests */,
 				F1EE46731D5E83600085253A /* JunctionUITests */,
@@ -97,9 +163,13 @@
 		F1EE46531D5E83600085253A /* Junction */ = {
 			isa = PBXGroup;
 			children = (
+				F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */,
 				F1EE46541D5E83600085253A /* AppDelegate.swift */,
 				F1EE46561D5E83600085253A /* ViewController.swift */,
+				F1EE46831D5E839C0085253A /* ConsentDocument.swift */,
+				F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */,
 				F1EE46581D5E83600085253A /* Main.storyboard */,
+				F15CBA951D5E905000FFFCA3 /* DataParser.swift */,
 				F1EE465B1D5E83600085253A /* Assets.xcassets */,
 				F1EE465D1D5E83600085253A /* LaunchScreen.storyboard */,
 				F1EE46601D5E83600085253A /* Info.plist */,
@@ -135,10 +205,12 @@
 				F1EE464D1D5E83600085253A /* Sources */,
 				F1EE464E1D5E83600085253A /* Frameworks */,
 				F1EE464F1D5E83600085253A /* Resources */,
+				F15CBA891D5E84BD00FFFCA3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F15CBA881D5E84BD00FFFCA3 /* PBXTargetDependency */,
 			);
 			name = Junction;
 			productName = Junction;
@@ -193,6 +265,15 @@
 				TargetAttributes = {
 					F1EE46501D5E83600085253A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 28887W4KM9;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 					F1EE46641D5E83600085253A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -215,6 +296,12 @@
 			mainGroup = F1EE46481D5E83600085253A;
 			productRefGroup = F1EE46521D5E83600085253A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F15CBA7C1D5E84AE00FFFCA3 /* Products */;
+					ProjectRef = F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F1EE46501D5E83600085253A /* Junction */,
@@ -223,6 +310,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = F15CBA811D5E84AF00FFFCA3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F15CBA841D5E84AF00FFFCA3 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = F15CBA831D5E84AF00FFFCA3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F1EE464F1D5E83600085253A /* Resources */ = {
@@ -257,6 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1EE46571D5E83600085253A /* ViewController.swift in Sources */,
+				F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */,
+				F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */,
+				F1EE46841D5E839C0085253A /* ConsentDocument.swift in Sources */,
+				F15CBA901D5E8A7800FFFCA3 /* HealthKitManager.swift in Sources */,
+				F15CBA961D5E905000FFFCA3 /* DataParser.swift in Sources */,
 				F1EE46551D5E83600085253A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +389,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F15CBA881D5E84BD00FFFCA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = F15CBA871D5E84BD00FFFCA3 /* PBXContainerItemProxy */;
+		};
 		F1EE46671D5E83600085253A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1EE46501D5E83600085253A /* Junction */;
@@ -401,6 +515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Junction/Junction.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Junction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = i.rob.Junction;
@@ -412,6 +528,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Junction/Junction.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Junction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = i.rob.Junction;
@@ -484,6 +602,7 @@
 				F1EE467B1D5E83600085253A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1EE467C1D5E83600085253A /* Build configuration list for PBXNativeTarget "JunctionTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +611,7 @@
 				F1EE467E1D5E83600085253A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1EE467F1D5E83600085253A /* Build configuration list for PBXNativeTarget "JunctionUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +620,7 @@
 				F1EE46811D5E83600085253A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
