@@ -18,15 +18,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95v-Mm-Zjm">
-                                <rect key="frame" x="271" y="266" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="277" y="266" width="98" height="30"/>
+                                <state key="normal" title="iPhone Button"/>
+                                <connections>
+                                    <action selector="iPhonePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccB-ir-Uc6"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N67-Bs-b8n">
+                                <rect key="frame" x="295" y="304" width="62" height="30"/>
+                                <state key="normal" title="Message"/>
+                                <connections>
+                                    <action selector="messageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIM-Q1-fTf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-0G-cna">
+                                <rect key="frame" x="278" y="336" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="simpleTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Apx-C0-yWF"/>
+                                    <action selector="testField:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="hLb-f0-4jp"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-tR-xeA">
+                                <rect key="frame" x="311" y="374" width="30" height="30"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="quitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6oh-7b-aTe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpL-vL-Cal">
+                                <rect key="frame" x="297" y="417" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="np6-kM-k1p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Connect To Server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWM-Vj-tpu">
+                                <rect key="frame" x="232" y="229" width="348" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="conButton" destination="NpL-vL-Cal" id="bZw-LT-jbd"/>
+                        <outlet property="simpleField" destination="QAf-0G-cna" id="pLG-XV-rWX"/>
+                        <outlet property="theLabel" destination="OWM-Vj-tpu" id="kTi-GF-Pbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="241"/>
         </scene>
     </scenes>
 </document>

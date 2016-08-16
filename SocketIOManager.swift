@@ -15,7 +15,7 @@ class SocketIOManager: NSObject {
         super.init()
     }
     
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "192.54.222.20:3080")!)
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "localhost:3080")!)
     
     func establishConnection() {
         socket.connect()
