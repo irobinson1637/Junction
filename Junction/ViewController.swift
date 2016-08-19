@@ -171,7 +171,7 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //print(dataPassed)
-       
+       ThirdViewController
     }
     
 
