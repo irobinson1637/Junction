@@ -34,14 +34,18 @@ extension ViewController : ORKTaskViewControllerDelegate {
 }
 
 class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
+    @IBOutlet weak var consentButton: UIButton!
     @IBOutlet weak var connectButto: UIButton!
     @IBOutlet weak var theRealLabel: UILabel!
     var heartStore = ""
     var heartStore2 = ""
-
+  
+   
+    
+ 
     //Socket server
-    let addr = "10.189.1.64"
-    let port = 9866
+    let addr = "18.111.51.218"
+    let port = 8080
     
     //Network variables
     var inStream : NSInputStream?
@@ -65,6 +69,8 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
     taskViewController.delegate = self
     presentViewController(taskViewController, animated: true, completion: nil)
+        consentButton.enabled = false
+        
 }
     @IBAction func authorizeTapped(sender: AnyObject) {
         HealthKitManager.authorizeHealthKit()
@@ -74,22 +80,27 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     @IBAction func buttonClicked(sender: AnyObject) {
     
     }
-    //Button Functions
-    func btnConnectPressed(sender: UIButton) {
-        NetworkEnable()
-    }
+    
     @IBAction func connectButton2(sender: UIButton) {
         NetworkEnable()
     }
     var valuu = "msg:jj"
     @IBAction func quitButtonPressed2(sender: UIButton) {
-        let data : NSData = heartStore2.dataUsingEncoding(NSUTF8StringEncoding)!
+        let data : NSData = heartStore.dataUsingEncoding(NSUTF8StringEncoding)!
         outStream?.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
     }
     @IBAction func iButton(sender: UIButton) {
         let data : NSData = "iPhone:Hello".dataUsingEncoding(NSUTF8StringEncoding)!
         outStream?.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
     }
+    
+    func updateData(ring:String){
+        print("Data updataed")
+        print(ring)
+    }
+    //Symptom Input:
+
+    
     
     //Network functions
     func NetworkEnable() {
@@ -159,11 +170,18 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//print(dataPassed)
+       
     }
+    
+
+ 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
 

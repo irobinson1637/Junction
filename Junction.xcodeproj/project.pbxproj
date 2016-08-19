@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1028FA61D66495E003ECC4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1028FA51D66495E003ECC4B /* ThirdViewController.swift */; };
 		F15CBA851D5E84BD00FFFCA3 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; };
 		F15CBA861D5E84BD00FFFCA3 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */; };
@@ -14,6 +15,7 @@
 		F15CBA921D5E8BF900FFFCA3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */; };
 		F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */; };
 		F15CBA961D5E905000FFFCA3 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA951D5E905000FFFCA3 /* DataParser.swift */; };
+		F1E447601D662E0D00363D72 /* shareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4475F1D662E0D00363D72 /* shareData.swift */; };
 		F1EE46551D5E83600085253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46541D5E83600085253A /* AppDelegate.swift */; };
 		F1EE46571D5E83600085253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46561D5E83600085253A /* ViewController.swift */; };
 		F1EE465A1D5E83600085253A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EE46581D5E83600085253A /* Main.storyboard */; };
@@ -77,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1028FA51D66495E003ECC4B /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Junction.entitlements; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTask.swift; sourceTree = "<group>"; };
 		F15CBA951D5E905000FFFCA3 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		F1E4475F1D662E0D00363D72 /* shareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shareData.swift; sourceTree = "<group>"; };
 		F1EE46511D5E83600085253A /* Junction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EE46541D5E83600085253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1EE46561D5E83600085253A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,9 +170,11 @@
 				F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */,
 				F1EE46541D5E83600085253A /* AppDelegate.swift */,
 				F1EE46561D5E83600085253A /* ViewController.swift */,
+				F1E4475F1D662E0D00363D72 /* shareData.swift */,
 				F1EE46831D5E839C0085253A /* ConsentDocument.swift */,
 				F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */,
 				F1EE46581D5E83600085253A /* Main.storyboard */,
+				F1028FA51D66495E003ECC4B /* ThirdViewController.swift */,
 				F15CBA951D5E905000FFFCA3 /* DataParser.swift */,
 				F1EE465B1D5E83600085253A /* Assets.xcassets */,
 				F1EE465D1D5E83600085253A /* LaunchScreen.storyboard */,
@@ -362,9 +368,11 @@
 			files = (
 				F1EE46571D5E83600085253A /* ViewController.swift in Sources */,
 				F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */,
+				F1028FA61D66495E003ECC4B /* ThirdViewController.swift in Sources */,
 				F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */,
 				F1EE46841D5E839C0085253A /* ConsentDocument.swift in Sources */,
 				F15CBA901D5E8A7800FFFCA3 /* HealthKitManager.swift in Sources */,
+				F1E447601D662E0D00363D72 /* shareData.swift in Sources */,
 				F15CBA961D5E905000FFFCA3 /* DataParser.swift in Sources */,
 				F1EE46551D5E83600085253A /* AppDelegate.swift in Sources */,
 			);
