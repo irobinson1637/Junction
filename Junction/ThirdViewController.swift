@@ -9,20 +9,21 @@
 import UIKit
 
 
-protocol VCTwoDelegate {
-    //func updateData(data: String)
-}
 
 
 class ThirdViewController: UIViewController {
     
     var selectedName: String = "Anonymous"
-    var delegate2: ViewController!
+    let delegate = ViewController()
 
 
     @IBAction func choiceMade(sender: AnyObject) {
-    self.delegate2?.updateData("d")
+    delegate.updateData("d")
         print("choice made")
+    }
+    
+    static func testing(){
+        print("hekko")
     }
   
 

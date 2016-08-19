@@ -37,11 +37,11 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     @IBOutlet weak var consentButton: UIButton!
     @IBOutlet weak var connectButto: UIButton!
     @IBOutlet weak var theRealLabel: UILabel!
-    var heartStore = ""
-    var heartStore2 = ""
-  
-   
-    
+    var heartStore = " "
+    var heartStore2 = " "
+    var delegate2 = ViewController!.self
+
+      //  let tesTer = shareData.sharedInstance
  
     //Socket server
     let addr = "18.111.51.218"
@@ -97,6 +97,8 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     func updateData(ring:String){
         print("Data updataed")
         print(ring)
+       //ThirdViewController.testing()
+        
     }
     //Symptom Input:
 
@@ -171,7 +173,7 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //print(dataPassed)
-       ThirdViewController
+       
     }
     
 

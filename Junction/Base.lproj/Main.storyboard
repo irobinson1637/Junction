@@ -176,17 +176,6 @@
                                     <action selector="b1:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="Huh-lP-GHE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryu-Z6-bbV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Send"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="88" y="141" width="36" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="b3:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="yyX-Eu-FpT"/>
-                                    <action selector="choiceMade:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="coW-6f-60g"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOd-Hx-wde">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -197,22 +186,34 @@
                                     <action selector="b2:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="cyW-Sr-Svh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryu-Z6-bbV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="162" width="36" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="b3:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="yyX-Eu-FpT"/>
+                                    <action selector="choiceMade:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="coW-6f-60g"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="De3-fi-Clq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="II8-cB-Hcu"/>
                                 <exclude reference="bvW-4l-8n3"/>
-                                <exclude reference="ryu-Z6-bbV"/>
                                 <exclude reference="LOd-Hx-wde"/>
+                                <exclude reference="ryu-Z6-bbV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="II8-cB-Hcu"/>
                                 <include reference="bvW-4l-8n3"/>
-                                <include reference="ryu-Z6-bbV"/>
                                 <include reference="LOd-Hx-wde"/>
+                                <include reference="ryu-Z6-bbV"/>
                             </mask>
                         </variation>
                     </view>
@@ -225,4 +226,7 @@
             <point key="canvasLocation" x="1143" y="101"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="z26-0V-Zxq"/>
+    </inferredMetricsTieBreakers>
 </document>
