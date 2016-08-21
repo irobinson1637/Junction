@@ -8,24 +8,11 @@
 
 import Foundation
 
-class ShareData {
-    class var sharedInstance: ShareData {
-        struct Static {
-            static var instance: ShareData?
-            static var token: dispatch_once_t = 0
-        }
-        
-        dispatch_once(&Static.token) {
-            Static.instance = ShareData()
-        }
-        
-        return Static.instance!
-    }
+class shareData {
+    static let sharedInstance = shareData()
+   // var currentController = 0 //0 for main view, 1 for third view
+    var symptomArray : [Int]
+    private init() {self.symptomArray = []} //do I need the self?
     
     
-    var someString : String! //Some String
-    
-    var selectedTheme : AnyObject! //Some Object
-    
-    var someBoolValue : Bool!
 }

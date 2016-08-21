@@ -9,6 +9,7 @@
 import UIKit
 import ResearchKit
 
+
 extension ViewController : ORKTaskViewControllerDelegate {
     
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
@@ -33,18 +34,20 @@ extension ViewController : ORKTaskViewControllerDelegate {
     
 }
 
-class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
+class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
     @IBOutlet weak var consentButton: UIButton!
     @IBOutlet weak var connectButto: UIButton!
     @IBOutlet weak var theRealLabel: UILabel!
     var heartStore = " "
     var heartStore2 = " "
     var delegate2 = ViewController!.self
+    var symStore: [Int] = []
+    var stringSymptomStore = ""
 
       //  let tesTer = shareData.sharedInstance
  
     //Socket server
-    let addr = "18.111.51.218"
+    let addr = "192.168.0.10"
     let port = 8080
     
     //Network variables
@@ -53,6 +56,12 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     
     //Data received
     var buffer = [UInt8](count: 200, repeatedValue: 0)
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+        
+    }
     
     @IBAction func walkTapped(sender: AnyObject) {
         print("tapped")
@@ -77,15 +86,13 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
         //TODO: disable button
         
     }
-    @IBAction func buttonClicked(sender: AnyObject) {
-    
-    }
-    
+ 
     @IBAction func connectButton2(sender: UIButton) {
-        NetworkEnable()
+       NetworkEnable()
+        
     }
     var valuu = "msg:jj"
-    @IBAction func quitButtonPressed2(sender: UIButton) {
+    @IBAction func commitButtonPressed2(sender: UIButton) {
         let data : NSData = heartStore.dataUsingEncoding(NSUTF8StringEncoding)!
         outStream?.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
     }
@@ -95,11 +102,37 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
     }
     
     func updateData(ring:String){
-        print("Data updataed")
-        print(ring)
-       //ThirdViewController.testing()
+       print("Data updataed: ")
+    }
+    func arrayToString(toConvert:[Int]) -> String{
+        var convertedArray = ""
+        for items in toConvert{
+            let tempStore = String(items)
+            convertedArray+=tempStore
+            convertedArray+=","
+        }
+        return convertedArray
         
     }
+    
+    @IBAction func commitSymptom(sender: AnyObject) {
+        symStore = shareData.sharedInstance.symptomArray
+        print("sym Store:")
+        print(symStore)
+        stringSymptomStore = arrayToString(symStore)
+        print("sendong...")
+        print(stringSymptomStore)
+        let data : NSData = stringSymptomStore.dataUsingEncoding(NSUTF8StringEncoding)!
+        outStream?.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+        
+       
+    
+    }
+    @IBAction func switchView(sender: UIButton) {
+      //  NetworkEnable()
+  
+    }
+  
     //Symptom Input:
 
     
@@ -122,6 +155,17 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
         buffer = [UInt8](count: 200, repeatedValue: 0)
     }
     
+    @IBAction func NetworkDisable(){
+        print("Network abandoned")
+        inStream?.close()
+        inStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+        outStream?.close()
+        outStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+        connectButto.enabled = true
+        theRealLabel.text = "Connection stopped by user"
+        
+    }
+    
     func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
         
         switch eventCode {
@@ -141,8 +185,9 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
             inStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
             outStream?.close()
             outStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-            theRealLabel.text="Failed to connect to server"
-            connectButto.enabled = true
+                theRealLabel.text="Failed to connect to server"
+                connectButto.enabled = true
+            
         case NSStreamEvent.HasBytesAvailable:
             print("HasBytesAvailable")
             
@@ -159,8 +204,9 @@ class ViewController: UIViewController,NSStreamDelegate{//,UITextFieldDelegate
             print("None")
         case NSStreamEvent.OpenCompleted:
             print("OpenCompleted")
-            connectButto.enabled = false
-            theRealLabel.text="Connected to server"
+                connectButto.enabled = false
+                theRealLabel.text="Connected to server"
+
         default:
             print("Unknown")
         }
