@@ -43,11 +43,13 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
     var delegate2 = ViewController!.self
     var symStore: [Int] = []
     var stringSymptomStore = ""
-
+    let stats = dataStatistics()
+    var averageHeart3Day:Int = 0
+ 
       //  let tesTer = shareData.sharedInstance
  
     //Socket server
-    let addr = "192.168.0.10"
+    let addr = "10.189.22.21"
     let port = 8080
     
     //Network variables
@@ -114,9 +116,16 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
         return convertedArray
         
     }
+   @IBAction func getStatistics(){
+        stats.getStats()
+    }
     
     @IBAction func commitSymptom(sender: AnyObject) {
+         averageHeart3Day=shareData.sharedInstance.averageHeartRate
         symStore = shareData.sharedInstance.symptomArray
+        print("average rate: ")
+        print(averageHeart3Day)
+        symStore[symStore.endIndex-1] = averageHeart3Day
         print("sym Store:")
         print(symStore)
         stringSymptomStore = arrayToString(symStore)

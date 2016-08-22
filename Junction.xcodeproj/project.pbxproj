@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F1028FA61D66495E003ECC4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1028FA51D66495E003ECC4B /* ThirdViewController.swift */; };
+		F14247CE1D6B429D0058AE23 /* dataStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14247CD1D6B429D0058AE23 /* dataStatistics.swift */; };
 		F15CBA851D5E84BD00FFFCA3 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; };
 		F15CBA861D5E84BD00FFFCA3 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA821D5E84AF00FFFCA3 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		F1028FA51D66495E003ECC4B /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F14247CD1D6B429D0058AE23 /* dataStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataStatistics.swift; sourceTree = "<group>"; };
 		F15CBA7B1D5E84AE00FFFCA3 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Junction.entitlements; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F15CBA8E1D5E895000FFFCA3 /* Junction.entitlements */,
 				F1EE46541D5E83600085253A /* AppDelegate.swift */,
 				F1EE46561D5E83600085253A /* ViewController.swift */,
+				F14247CD1D6B429D0058AE23 /* dataStatistics.swift */,
 				F1E4475F1D662E0D00363D72 /* shareData.swift */,
 				F1EE46831D5E839C0085253A /* ConsentDocument.swift */,
 				F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */,
@@ -368,6 +371,7 @@
 			files = (
 				F1EE46571D5E83600085253A /* ViewController.swift in Sources */,
 				F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */,
+				F14247CE1D6B429D0058AE23 /* dataStatistics.swift in Sources */,
 				F1028FA61D66495E003ECC4B /* ThirdViewController.swift in Sources */,
 				F15CBA8B1D5E853B00FFFCA3 /* ConsentTask.swift in Sources */,
 				F1EE46841D5E839C0085253A /* ConsentDocument.swift in Sources */,

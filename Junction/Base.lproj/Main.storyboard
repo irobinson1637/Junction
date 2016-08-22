@@ -37,19 +37,6 @@
                                     <rect key="frame" x="353" y="570" width="47" height="30"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-aR-5eS">
-                                <rect key="frame" x="285" y="412" width="30" height="30"/>
-                                <state key="normal" title="Commit Walk"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="402" width="91" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="293" y="327" width="62" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="commitButtonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0i-XW-bKJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-wI-XJh">
                                 <rect key="frame" x="271" y="209" width="59" height="30"/>
                                 <state key="normal" title="Connect"/>
@@ -145,6 +132,29 @@
                                     <action selector="NetworkDisable" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tmg-EY-VCY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bde-8N-GbX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="stats"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="263" y="440" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getStatistics" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gms-yc-whJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-aR-5eS">
+                                <rect key="frame" x="285" y="412" width="30" height="30"/>
+                                <state key="normal" title="Commit Walk"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="257" y="402" width="91" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="293" y="327" width="62" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="commitButtonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0i-XW-bKJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -152,6 +162,7 @@
                                 <exclude reference="ZbA-cG-Clf"/>
                                 <exclude reference="7cp-oN-sKX"/>
                                 <exclude reference="slZ-gw-c26"/>
+                                <exclude reference="bde-8N-GbX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -159,6 +170,7 @@
                                 <include reference="ZbA-cG-Clf"/>
                                 <include reference="7cp-oN-sKX"/>
                                 <include reference="slZ-gw-c26"/>
+                                <include reference="bde-8N-GbX"/>
                             </mask>
                         </variation>
                     </view>

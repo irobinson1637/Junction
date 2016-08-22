@@ -14,7 +14,7 @@ import UIKit
 class ThirdViewController: UIViewController {
     
     var selectedName: String = "Anonymous"
-    let delegate = ViewController()
+    //let delegate = ViewController()
 
     @IBOutlet weak var b1: UIButton!
 
@@ -38,7 +38,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func choiceMade(sender: AnyObject) {
         shareData.sharedInstance.symptomArray  = sympStore
-     delegate.updateData("reeeee")
+    // delegate.updateData("reeeee")
         print("choice made")
     }
     

@@ -24,13 +24,15 @@ class HealthKitManager: NSObject {
     }
     
     static func saveMockHeartData() {
+        let calendar = NSCalendar.currentCalendar()
+        let twoDaysAgo = calendar.dateByAddingUnit(.Day, value: -2, toDate: NSDate(), options: [])
         
         // 1. Create a heart rate Sample
         let heartRateType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
         let heartRateQuantity = HKQuantity(unit: HKUnit(fromString: "count/min"),
                                            doubleValue: Double(arc4random_uniform(80) + 100))
         let heartSample = HKQuantitySample(type: heartRateType,
-                                           quantity: heartRateQuantity, startDate: NSDate(), endDate: NSDate())
+                                           quantity: heartRateQuantity, startDate: twoDaysAgo!, endDate: NSDate())
         
         // 2. Save the sample in the store
         healthKitStore.saveObject(heartSample, withCompletion: { (success, error) -> Void in

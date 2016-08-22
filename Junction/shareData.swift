@@ -12,7 +12,11 @@ class shareData {
     static let sharedInstance = shareData()
    // var currentController = 0 //0 for main view, 1 for third view
     var symptomArray : [Int]
-    private init() {self.symptomArray = []} //do I need the self?
+    var averageHeartRate: Int
+    private init() {
+        self.symptomArray = []
+        self.averageHeartRate = -1
+    } //do I need the self?
     
     
 }
