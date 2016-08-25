@@ -31,7 +31,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var b7: UIButton!
     
     @IBOutlet weak var b8: UIButton!
-    
+    var y = 3
     
     
     
@@ -48,38 +48,41 @@ class ThirdViewController: UIViewController {
     
 
 
-    var sympStore : [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var sympStore : [Int] = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //0 is test or train
+    //1 is sickness for train, -1 if tes
+    //rest is symptom
+    //2 is avergae heart rate
     
     @IBAction func b1(sender: UIButton) {
-        sympStore[0]=1
+        sympStore[y]=1
         b1.enabled = false
     }
     @IBAction func b2(sender: UIButton) {
-        sympStore[1]=1
+        sympStore[y+1]=1
         b2.enabled = false
     }
     @IBAction func b3(sender: UIButton) {
-        sympStore[2]=1
+        sympStore[y+2]=1
         b3.enabled = false
     }
     @IBAction func b4(sender: UIButton) {
-        sympStore[3]=1
+        sympStore[y+3]=1
         b4.enabled = false
     }
     @IBAction func b5(sender: UIButton) {
-        sympStore[4]=1
+        sympStore[y+4]=1
         b5.enabled = false
     }
     @IBAction func b6(sender: UIButton) {
-         sympStore[5]=1
+         sympStore[y+5]=1
         b6.enabled = false
     }
     @IBAction func b7(sender: UIButton) {
-         sympStore[6]=1
+         sympStore[y+6]=1
         b7.enabled = false
     }
     @IBAction func b8(sender: UIButton) {
-         sympStore[7]=1
+         sympStore[y+7]=1
         b8.enabled = false
     }
     

@@ -45,11 +45,14 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
     var stringSymptomStore = ""
     let stats = dataStatistics()
     var averageHeart3Day:Int = 0
+    var nameStore = "Name:"
+    var justName = "💔"
+    var isTaken: String = ""
  
       //  let tesTer = shareData.sharedInstance
  
     //Socket server
-    let addr = "10.189.22.21"
+    let addr = "18.111.77.90"
     let port = 8080
     
     //Network variables
@@ -64,7 +67,10 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
             dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
         
     }
-    
+
+    @IBAction func sickInput(sender: UIButton) {
+       shareData.sharedInstance.symptomArray[0] = 10
+    }
     @IBAction func walkTapped(sender: AnyObject) {
         print("tapped")
         let taskViewController = ORKTaskViewController(task: WalkTask, taskRunUUID: nil)
@@ -91,6 +97,7 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
  
     @IBAction func connectButton2(sender: UIButton) {
        NetworkEnable()
+        popUp()
         
     }
     var valuu = "msg:jj"
@@ -116,19 +123,19 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
         return convertedArray
         
     }
-   @IBAction func getStatistics(){
-        stats.getStats()
+   @IBAction func getStatistics(){ //gets average heart rate for last 3 days
+        stats.getStats() //gets average heart rate for last 3 days
     }
     
     @IBAction func commitSymptom(sender: AnyObject) {
-         averageHeart3Day=shareData.sharedInstance.averageHeartRate
+        averageHeart3Day=shareData.sharedInstance.averageHeartRate
         symStore = shareData.sharedInstance.symptomArray
         print("average rate: ")
         print(averageHeart3Day)
-        symStore[symStore.endIndex-1] = averageHeart3Day
+        symStore[2] = averageHeart3Day
         print("sym Store:")
         print(symStore)
-        stringSymptomStore = arrayToString(symStore)
+        stringSymptomStore = arrayToString(symStore)+justName
         print("sendong...")
         print(stringSymptomStore)
         let data : NSData = stringSymptomStore.dataUsingEncoding(NSUTF8StringEncoding)!
@@ -136,6 +143,34 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
         
        
     
+    }
+    func popUp(){
+        
+        
+        //1. Create the alert controller.
+        var alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .Alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.text = ""
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            let textField = alert.textFields![0] as UITextField
+            print("Text field: \(textField.text)")
+            self.nameStore += textField.text!
+            self.justName += textField.text!
+            let data : NSData = self.nameStore.dataUsingEncoding(NSUTF8StringEncoding)!
+            self.outStream?.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+            
+        }))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+
+        
     }
     @IBAction func switchView(sender: UIButton) {
       //  NetworkEnable()
@@ -166,6 +201,8 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
     
     @IBAction func NetworkDisable(){
         print("Network abandoned")
+        nameStore = "Name:"
+        justName = "💔"
         inStream?.close()
         inStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         outStream?.close()
@@ -179,8 +216,10 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
         
         switch eventCode {
         case NSStreamEvent.EndEncountered:
+            nameStore = "Name:"
+            justName = "💔"
             print("EndEncountered")
-            theRealLabel.text = "Connection stopped by server"
+            theRealLabel.text = "Connection stopped by server: Try a different UserName"
             connectButto.enabled = true
             inStream?.close()
             inStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
@@ -188,6 +227,8 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
             print("Stop outStream currentRunLoop")
             outStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         case NSStreamEvent.ErrorOccurred:
+            nameStore = "Name:"
+            justName = "💔"
             print("ErrorOccurred")
             
             inStream?.close()
@@ -199,13 +240,16 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
             
         case NSStreamEvent.HasBytesAvailable:
             print("HasBytesAvailable")
-            
             if aStream == inStream {
                 inStream!.read(&buffer, maxLength: buffer.count)
                 let bufferStr = NSString(bytes: &buffer, length: buffer.count, encoding: NSUTF8StringEncoding)
-                theRealLabel.text = bufferStr! as String
-                print(bufferStr!)
-            }
+                theRealLabel.text =  bufferStr! as String
+                print("buffer is: ")
+                print(bufferStr! as String)
+                isTaken = bufferStr! as String
+              }
+                
+            
             
         case NSStreamEvent.HasSpaceAvailable:
             print("HasSpaceAvailable")

@@ -16,6 +16,7 @@
 		F15CBA921D5E8BF900FFFCA3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */; };
 		F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */; };
 		F15CBA961D5E905000FFFCA3 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CBA951D5E905000FFFCA3 /* DataParser.swift */; };
+		F19CB1901D6CA03300E8952A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19CB18F1D6CA03300E8952A /* SecondViewController.swift */; };
 		F1E447601D662E0D00363D72 /* shareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4475F1D662E0D00363D72 /* shareData.swift */; };
 		F1EE46551D5E83600085253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46541D5E83600085253A /* AppDelegate.swift */; };
 		F1EE46571D5E83600085253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE46561D5E83600085253A /* ViewController.swift */; };
@@ -89,6 +90,7 @@
 		F15CBA911D5E8BF900FFFCA3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F15CBA931D5E8E5D00FFFCA3 /* WalkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTask.swift; sourceTree = "<group>"; };
 		F15CBA951D5E905000FFFCA3 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		F19CB18F1D6CA03300E8952A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F1E4475F1D662E0D00363D72 /* shareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shareData.swift; sourceTree = "<group>"; };
 		F1EE46511D5E83600085253A /* Junction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EE46541D5E83600085253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				F15CBA8A1D5E853B00FFFCA3 /* ConsentTask.swift */,
 				F1EE46581D5E83600085253A /* Main.storyboard */,
 				F1028FA51D66495E003ECC4B /* ThirdViewController.swift */,
+				F19CB18F1D6CA03300E8952A /* SecondViewController.swift */,
 				F15CBA951D5E905000FFFCA3 /* DataParser.swift */,
 				F1EE465B1D5E83600085253A /* Assets.xcassets */,
 				F1EE465D1D5E83600085253A /* LaunchScreen.storyboard */,
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19CB1901D6CA03300E8952A /* SecondViewController.swift in Sources */,
 				F1EE46571D5E83600085253A /* ViewController.swift in Sources */,
 				F15CBA941D5E8E5D00FFFCA3 /* WalkTask.swift in Sources */,
 				F14247CE1D6B429D0058AE23 /* dataStatistics.swift in Sources */,

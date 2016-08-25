@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Junction" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Junction" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="271" y="285" width="58" height="30"/>
                                 <state key="normal" title="Consent"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="171" y="229" width="58" height="30"/>
+                                    <rect key="frame" x="5" y="77" width="58" height="30"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="171" y="148" width="58" height="30"/>
@@ -30,34 +30,17 @@
                                     <action selector="consentTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOq-Wy-q32"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0o-Lo-Mwf">
-                                <rect key="frame" x="277" y="247" width="47" height="30"/>
-                                <state key="normal" title="iPhone"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-aR-5eS">
+                                <rect key="frame" x="285" y="412" width="30" height="30"/>
+                                <state key="normal" title="Commit Sample Heart Rate"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="353" y="570" width="47" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-wI-XJh">
-                                <rect key="frame" x="271" y="209" width="59" height="30"/>
-                                <state key="normal" title="Connect"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="5" y="229" width="59" height="30"/>
+                                    <rect key="frame" x="209" y="570" width="186" height="30"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="327" width="59" height="30"/>
+                                    <rect key="frame" x="273" y="272" width="119" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="connectButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rZ-f7-QEV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nii-tD-yS2">
-                                <rect key="frame" x="277" y="247" width="47" height="30"/>
-                                <state key="normal" title="iPhone"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="570" width="47" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="iButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05h-yp-rfM"/>
+                                    <action selector="commitButtonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0i-XW-bKJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD5-Hh-2yx">
@@ -66,54 +49,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="289" width="400" height="21"/>
+                                    <rect key="frame" x="-5" y="289" width="400" height="21"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="38" y="234" width="325" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbA-cG-Clf">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Input Symptom"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="346" width="105" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="switchView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOf-IM-QWx"/>
-                                    <segue destination="3Pk-Zd-bdc" kind="show" id="K8F-wF-eLy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUq-jH-RHN">
-                                <rect key="frame" x="283" y="374" width="34" height="30"/>
-                                <state key="normal" title="Walk"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="402" width="101" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="327" width="101" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="156" y="361" width="54" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="walkTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6a9-tu-Y9Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-oN-sKX">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Commit Symptom"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="346" width="123" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="commitSymptom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DI8-WA-HED"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-OE-Zg1">
                                 <rect key="frame" x="267" y="336" width="66" height="30"/>
                                 <state key="normal" title="Authorize"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="329" y="229" width="66" height="30"/>
+                                    <rect key="frame" x="329" y="77" width="66" height="30"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="169" y="89" width="66" height="30"/>
@@ -122,55 +68,105 @@
                                     <action selector="authorizeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wdh-sA-48a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-gw-c26">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Disconnect"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="159" width="78" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="NetworkDisable" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tmg-EY-VCY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bde-8N-GbX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="stats"/>
+                                <state key="normal" title="Add Heart Rate Stat"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="263" y="440" width="34" height="30"/>
+                                    <rect key="frame" x="11" y="570" width="137" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="getStatistics" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gms-yc-whJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-aR-5eS">
-                                <rect key="frame" x="285" y="412" width="30" height="30"/>
-                                <state key="normal" title="Commit Walk"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK9-wI-XJh">
+                                <rect key="frame" x="271" y="209" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="402" width="91" height="30"/>
+                                    <rect key="frame" x="5" y="170" width="59" height="30"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="293" y="327" width="62" height="30"/>
+                                    <rect key="frame" x="171" y="115" width="59" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="commitButtonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0i-XW-bKJ"/>
+                                    <action selector="connectButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rZ-f7-QEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-Wf-Hts">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Input Sickness"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="6" y="415" width="114" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sickInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnC-Ny-IXt"/>
+                                    <segue destination="LQa-MZ-oJ3" kind="show" id="8zd-82-baW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUq-jH-RHN">
+                                <rect key="frame" x="283" y="374" width="34" height="30"/>
+                                <state key="normal" title="Sample Heart Rate"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="266" y="339" width="129" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="272" width="101" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="361" width="54" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="walkTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6a9-tu-Y9Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-gw-c26">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Disconnect"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="323" y="170" width="78" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="NetworkDisable" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tmg-EY-VCY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-oN-sKX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Commit Symptom"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="377" width="123" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="commitSymptom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DI8-WA-HED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbA-cG-Clf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Input Symptom"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="339" width="105" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="switchView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOf-IM-QWx"/>
+                                    <segue destination="3Pk-Zd-bdc" kind="show" id="K8F-wF-eLy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="ZbA-cG-Clf"/>
-                                <exclude reference="7cp-oN-sKX"/>
-                                <exclude reference="slZ-gw-c26"/>
                                 <exclude reference="bde-8N-GbX"/>
+                                <exclude reference="9iX-Wf-Hts"/>
+                                <exclude reference="slZ-gw-c26"/>
+                                <exclude reference="7cp-oN-sKX"/>
+                                <exclude reference="ZbA-cG-Clf"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="ZbA-cG-Clf"/>
-                                <include reference="7cp-oN-sKX"/>
-                                <include reference="slZ-gw-c26"/>
                                 <include reference="bde-8N-GbX"/>
+                                <include reference="9iX-Wf-Hts"/>
+                                <include reference="slZ-gw-c26"/>
+                                <include reference="7cp-oN-sKX"/>
+                                <include reference="ZbA-cG-Clf"/>
                             </mask>
                         </variation>
                     </view>
@@ -182,7 +178,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="259"/>
+            <point key="canvasLocation" x="213" y="258"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="7Wp-x0-hLq">
+            <objects>
+                <viewController id="LQa-MZ-oJ3" customClass="SecondViewController" customModule="Junction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5af-Di-kWi"/>
+                        <viewControllerLayoutGuide type="bottom" id="9sJ-yv-WWn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gKp-yM-tcI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yav-wG-TmV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="GO9-IB-nF6" style="IBUITableViewCellStyleDefault" id="8WU-LD-KJD">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8WU-LD-KJD" id="7U3-1t-YeV">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GO9-IB-nF6">
+                                                    <rect key="frame" x="15" y="0.0" width="210" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="571"/>
+                                </variation>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWE-4v-SFn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="570" width="400" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pkQ-u7-An8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yav-wG-TmV"/>
+                                <exclude reference="kWE-4v-SFn"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Yav-wG-TmV"/>
+                                <include reference="kWE-4v-SFn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Yav-wG-TmV" id="a18-uv-Eqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8b-hS-NrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.5" y="-610"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="6tS-We-y54">
@@ -196,21 +265,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="II8-cB-Hcu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="198" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="b3:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="ewi-Kt-urq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOd-Hx-wde">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Runny Nose"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="155" width="46" height="30"/>
+                                    <rect key="frame" x="2" y="155" width="83" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="131" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b2:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="cyW-Sr-Svh"/>
@@ -229,9 +291,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-yk-ES2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Brusing"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="285" width="46" height="30"/>
+                                    <rect key="frame" x="17" y="285" width="53" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="277" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b5:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="oba-54-eMM"/>
@@ -239,29 +304,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGp-8o-q1i">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Fever"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="329" width="46" height="30"/>
+                                    <rect key="frame" x="24" y="329" width="38" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="324" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b6:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="QIb-tL-nMI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qr-3L-8fp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="374" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="b7:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="vnM-Cc-cn0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EW6-3i-eUE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Vomiting"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="424" width="46" height="30"/>
+                                    <rect key="frame" x="13" y="424" width="61" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b8:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="Esg-2m-qz9"/>
@@ -269,9 +327,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPk-Gq-QhC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Head Aches"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="236" width="46" height="30"/>
+                                    <rect key="frame" x="2" y="236" width="83" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="230" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b4:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="z5O-GX-O6l"/>
@@ -279,40 +340,69 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-4l-8n3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cough"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="96" width="46" height="30"/>
+                                    <rect key="frame" x="20" y="117" width="46" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="79" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="b1:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="Huh-lP-GHE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="II8-cB-Hcu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Aches"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="198" width="43" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="185" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="b3:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="ewi-Kt-urq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qr-3L-8fp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stomach Aches"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="374" width="107" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="370" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="b7:" destination="3Pk-Zd-bdc" eventType="touchUpInside" id="vnM-Cc-cn0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="II8-cB-Hcu"/>
                                 <exclude reference="LOd-Hx-wde"/>
                                 <exclude reference="ryu-Z6-bbV"/>
                                 <exclude reference="Dkt-yk-ES2"/>
                                 <exclude reference="hGp-8o-q1i"/>
-                                <exclude reference="3Qr-3L-8fp"/>
                                 <exclude reference="EW6-3i-eUE"/>
                                 <exclude reference="kPk-Gq-QhC"/>
                                 <exclude reference="bvW-4l-8n3"/>
+                                <exclude reference="II8-cB-Hcu"/>
+                                <exclude reference="3Qr-3L-8fp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="II8-cB-Hcu"/>
                                 <include reference="LOd-Hx-wde"/>
                                 <include reference="ryu-Z6-bbV"/>
                                 <include reference="Dkt-yk-ES2"/>
                                 <include reference="hGp-8o-q1i"/>
-                                <include reference="3Qr-3L-8fp"/>
                                 <include reference="EW6-3i-eUE"/>
                                 <include reference="kPk-Gq-QhC"/>
                                 <include reference="bvW-4l-8n3"/>
+                                <include reference="II8-cB-Hcu"/>
+                                <include reference="3Qr-3L-8fp"/>
                             </mask>
                         </variation>
                     </view>
@@ -330,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uih-qW-ghn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="101"/>
+            <point key="canvasLocation" x="1249.5" y="237"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
