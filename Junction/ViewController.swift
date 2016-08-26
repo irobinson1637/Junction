@@ -52,8 +52,8 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
       //  let tesTer = shareData.sharedInstance
  
     //Socket server
-    let addr = "18.111.77.90"
-    let port = 8080
+    let addr = "10.189.11.223"
+    let port = 8146
     
     //Network variables
     var inStream : NSInputStream?
@@ -71,16 +71,7 @@ class ViewController: UIViewController,NSStreamDelegate{  //,UITextFieldDelegate
     @IBAction func sickInput(sender: UIButton) {
        shareData.sharedInstance.symptomArray[0] = 10
     }
-    @IBAction func walkTapped(sender: AnyObject) {
-        print("tapped")
-        let taskViewController = ORKTaskViewController(task: WalkTask, taskRunUUID: nil)
-        taskViewController.delegate = self
-        taskViewController.outputDirectory = NSURL(fileURLWithPath:
-            NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0],
-                                                   isDirectory: true)
-        presentViewController(taskViewController, animated: true, completion: nil)
-        HealthKitManager.startMockHeartData()
-    }
+
     
     @IBAction func consentTapped(sender : AnyObject) {
     let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)

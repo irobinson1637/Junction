@@ -18,7 +18,7 @@ class shareData {
     var isTrainingData: Int
     var hasAccount:String
     private init() {
-        self.symptomArray = []
+        self.symptomArray = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         self.averageHeartRate = -1
         self.userNameTaken = true
         self.sickness = -1

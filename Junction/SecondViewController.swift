@@ -11,8 +11,8 @@ import UIKit
 class SecondViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
-    let sicks: [String] = ["Food Poisoning", "Flu", "Streph", "Zika"]
-    let sickKey: [Int] = [1, 2, 3, 4]
+    let sicks: [String] = ["Food Poisoning", "Flu", "Strep Throat", "Zika", "Infection", "Hepatitis B", "Periodontal Disease", "Heart Disease", ]
+    let sickKey: [Int] = [1, 2, 3, 4, 5, 6, 7, 8]
     let textCellIdentifier = "TextCell"
     override func viewDidLoad() {
         super.viewDidLoad()
